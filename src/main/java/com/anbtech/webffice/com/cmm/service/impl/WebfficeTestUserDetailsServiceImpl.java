@@ -30,13 +30,12 @@ public class WebfficeTestUserDetailsServiceImpl extends EgovAbstractServiceImpl 
 	public Object getAuthenticatedUser() {
 
 		LoginVO loginVO = new LoginVO();
-		loginVO.setId("TEST1");
-		loginVO.setPassword("raHLBnHFcunwNzcDcfad4PhD11hHgXSUr7fc1Jk9uoQ=");
-		loginVO.setUserSe("USR");
-		loginVO.setEmail("egovframe@nia.or.kr");
-		loginVO.setIhidNum("");
-		loginVO.setName("더미사용자");
-		loginVO.setOrgnztId("ORGNZT_0000000000000");
+		loginVO.setId(loginVO.getId());
+		loginVO.setPassword(loginVO.getPassword());
+		loginVO.setUserSe(loginVO.getUserSe());
+		loginVO.setEmail(loginVO.getEmail());
+		loginVO.setName(loginVO.getName());
+		loginVO.setDept_no(loginVO.getDept_no());
 		return loginVO;
 
 		// return

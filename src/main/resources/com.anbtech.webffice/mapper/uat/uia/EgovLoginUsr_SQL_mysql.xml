@@ -33,11 +33,11 @@
 		     , EMP.PW_VAL AS password
 		     , EMP.EMAIL_VAL AS email
 	     <choose>
-			<when test = "userSe == &quot;ADMIN&quot;">
-		     , 'ADMIN' As userSe
+			<when test = "userSe == &quot;admin&quot;">
+		     , 'admin' As userSe
 			</when>
 			<otherwise>
-		     , 'USR' As userSe
+		     , 'usr' As userSe
 			</otherwise>
 		</choose>
 		     , EMP.DEPT_NO AS dept_no

@@ -56,11 +56,11 @@ public class WebfficeJwtTokenUtil implements Serializable{
     //generate token for user
     public String generateToken(LoginVO loginVO) {
         Map<String, Object> claims = new HashMap<>();
-        return doGenerateToken(claims, loginVO.getUserSe()+loginVO.getId());
+        return doGenerateToken(claims, loginVO.getId());
     }
 
     public String generateToken(LoginVO loginVO, Map<String, Object> claims) {
-        return doGenerateToken(claims, loginVO.getUserSe()+loginVO.getId());
+        return doGenerateToken(claims, loginVO.getId());
     }
     
 	//while creating the token -
@@ -78,7 +78,7 @@ public class WebfficeJwtTokenUtil implements Serializable{
     //validate token
     public Boolean validateToken(String token, LoginVO loginVO) {
         final String username = getUsernameFromToken(token);
-        return (username.equals(loginVO.getUserSe()+loginVO.getId()) && !isTokenExpired(token));
+        return (username.equals(loginVO.getId()) && !isTokenExpired(token));
     }
 
 }

@@ -38,6 +38,7 @@ public class JwtVerification {
 		
 		try {
 	           username = jwtTokenUtil.getUsernameFromToken(jwtToken);
+	       	System.out.println("===>>> username = "+username);
 	        } catch (IllegalArgumentException e) {
 	        	log.debug("Unable to get JWT Token");
 	        } catch (ExpiredJwtException e) {
@@ -52,7 +53,7 @@ public class JwtVerification {
 		
 		// step 4. 가져온 username이랑 2에서 가져온 loginVO랑 비교해서 같은지 체크 & 이 과정에서 한번 더 기간 체크를 한다.
 		if (username == null || !(jwtTokenUtil.validateToken(jwtToken, loginVO))) {
-			log.debug("jwtToken not validate");
+	       	System.out.println("===>>> jwtToken not validate");
 			verificationFlag =  false;
 			return verificationFlag;
 		}

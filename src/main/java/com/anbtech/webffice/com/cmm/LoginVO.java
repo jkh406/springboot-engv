@@ -164,14 +164,14 @@ public class LoginVO implements Serializable{
 	 * dept_no attribute 를 리턴한다.
 	 * @return String
 	 */
-	public String getOrgnztId() {
+	public String getDept_no() {
 		return dept_no;
 	}
 	/**
 	 * orgnztId attribute 값을 설정한다.
 	 * @param orgnztId String
 	 */
-	public void setOrgnztId(String dept_no) {
+	public void setDept_no(String dept_no) {
 		this.dept_no = dept_no;
 	}
 	/**

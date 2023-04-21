@@ -114,7 +114,7 @@ public class WebfficeLoginServiceImpl extends EgovAbstractServiceImpl implements
 		String enpassword = WebfficeFileScrty.encryptPassword(newpassword, vo.getId());
 		pwVO.setId(vo.getId());
 		pwVO.setPassword(enpassword);
-		pwVO.setUserSe(vo.getUserSe());
+		pwVO.setUserSe(vo.getId());
 		loginDAO.updatePassword(pwVO);
 
 		return result;

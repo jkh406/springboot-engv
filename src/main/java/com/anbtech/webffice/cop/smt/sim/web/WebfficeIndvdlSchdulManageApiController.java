@@ -207,8 +207,8 @@ public class WebfficeIndvdlSchdulManageApiController {
 		indvdlSchdulManageVO.setFrstRegisterId(user.getId());
 		indvdlSchdulManageVO.setLastUpdusrId(user.getId());
 
-		indvdlSchdulManageVO.setSchdulDeptName("관리자부서");
-		indvdlSchdulManageVO.setSchdulDeptId("ORGNZT_0000000000000");
+		indvdlSchdulManageVO.setSchdulDeptName(user.getDept_nm());
+		indvdlSchdulManageVO.setSchdulDeptId(user.getDept_no());
 		indvdlSchdulManageVO.setSchdulChargerName("관리자");
 		indvdlSchdulManageVO.setSchdulChargerId("USRCNFRM_00000000000");
 		egovIndvdlSchdulManageService.insertIndvdlSchdulManage(indvdlSchdulManageVO);
