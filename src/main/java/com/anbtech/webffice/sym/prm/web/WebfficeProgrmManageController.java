@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springmodules.validation.commons.DefaultBeanValidator;
 
 import com.anbtech.webffice.com.cmm.ComDefaultVO;
@@ -36,7 +38,8 @@ import com.anbtech.webffice.sym.prm.service.WebfficeProgrmManageService;
  * </pre>
  */
 
-@Controller
+@RestController
+@SessionAttributes(types = ComDefaultVO.class)
 public class WebfficeProgrmManageController {
 
 	/** Validator */
