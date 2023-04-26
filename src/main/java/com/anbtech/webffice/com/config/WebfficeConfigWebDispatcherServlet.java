@@ -54,7 +54,6 @@ public class WebfficeConfigWebDispatcherServlet implements WebMvcConfigurer {
 		registry.addInterceptor(new AuthenticInterceptor())
 			.addPathPatterns(
 //				"/cop/com/*.do",
-//				"/cop/bbs/*Master*.do",
 				"/uat/uia/*.do")
 			.excludePathPatterns(
 				"/uat/uia/actionLogin.do",
