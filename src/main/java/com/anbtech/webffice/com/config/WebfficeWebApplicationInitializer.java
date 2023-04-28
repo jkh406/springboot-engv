@@ -35,6 +35,7 @@ public class WebfficeWebApplicationInitializer implements WebApplicationInitiali
 	public void onStartup(ServletContext servletContext) throws ServletException {
 
 		LOGGER.debug("EgovWebApplicationInitializer START-============================================");
+		System.out.println("##### WebfficeWebApplicationInitializer Start #####");
 
 		// -------------------------------------------------------------
 		// Spring Root Context 설정
